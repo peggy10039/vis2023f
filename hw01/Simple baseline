@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table{
+            border-collapse: collapse;
+            border-spacing: 2;
+        }
+        th, td{
+            padding: 10px 20px;
+            border: 2px solid #7195c4;
+        }
+    </style>
+
+</head>
+<body id="body">
+
+    <script type="text/javascript" charset="utf-8">
+        let table = document.createElement('table');
+        let thead = document.createElement('thead');
+        let tbody = document.createElement('tbody');
+
+        table.appendChild(thead);
+        table.appendChild(tbody);
+
+        function randomusefloor(min,max) {
+	        let tmp = Math.floor(Math.random()*(max-min+1)+min);
+            let s = tmp.toString();
+            return s;
+        }
+
+        function makerandomletter(max) {
+            var text = "";
+            var possible = "abcdefghijklmnopqrstuvwxyz";
+
+            for (var i = 0; i < max; i++)
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+                return text;
+        }
+
+        document.getElementById('body').appendChild(table);
+
+        var name0 = ['李', '王', '陳', '林', '張', '楊', '蔡', '葉', '黃', '言', '吳']
+        var name2 = ['小', '曉', '筱', '新', '欣', '勝', '盛', '乘', '彥', '燕', '宜']
+        var name3 = ['義', '億', '衍', '生', '昇', '忠', '誠', '承', '呈', '辰', '晨']
+        var dep = ['資工系', '資工所', '電資AI', '電資資安', '創新AI']
+        var num = ['111','112']
+        var num2 = ['590', '598', 'C52', 'C53','C71']
+
+        var name = name0.join('');
+
+        let row_1 = document.createElement('tr');
+        let heading_1 = document.createElement('th');
+        heading_1.innerHTML = "序號";
+        let heading_2 = document.createElement('th');
+        heading_2.innerHTML = "班級";
+        let heading_3 = document.createElement('th');
+        heading_3.innerHTML = "學號";
+        let heading_4 = document.createElement('th');
+        heading_4.innerHTML = "姓名";
+        let heading_5 = document.createElement('th');
+        heading_5.innerHTML = "GitGub學號";
+        let heading_6 = document.createElement('th');
+        heading_6.innerHTML = "作業一";
+        let heading_7 = document.createElement('th');
+        heading_7.innerHTML = "作業二";
+        let heading_8 = document.createElement('th');
+        heading_8.innerHTML = "作業三";
+        let heading_9 = document.createElement('th');
+        heading_9.innerHTML = "作業四";
+        let heading_10 = document.createElement('th');
+        heading_10.innerHTML = "作業五";
+        let heading_11 = document.createElement('th');
+        heading_11.innerHTML = "作業六";
+        let heading_12 = document.createElement('th');
+        heading_12.innerHTML = "作業七";
+        let heading_13 = document.createElement('th');
+        heading_13.innerHTML = "作業八";
+        let heading_14 = document.createElement('th');
+        heading_14.innerHTML = "作業九";
+        let heading_15 = document.createElement('th');
+        heading_15.innerHTML = "作業十";
+
+        row_1.appendChild(heading_1);
+        row_1.appendChild(heading_2);
+        row_1.appendChild(heading_3);
+        row_1.appendChild(heading_4);
+        row_1.appendChild(heading_5);
+        row_1.appendChild(heading_6);
+        row_1.appendChild(heading_7);
+        row_1.appendChild(heading_8);
+        row_1.appendChild(heading_9);
+        row_1.appendChild(heading_10);
+        row_1.appendChild(heading_11);
+        row_1.appendChild(heading_12);
+        row_1.appendChild(heading_13);
+        row_1.appendChild(heading_14);
+        row_1.appendChild(heading_15);
+        thead.appendChild(row_1);
+
+        var row = []
+
+        for (let index = 1; index < 121; index++) {
+            
+            let name_s = name[randomusefloor(0,10)]+name2[randomusefloor(0,10)]+name3[randomusefloor(0,10)]
+            let dep_s = dep[randomusefloor(0,4)]
+            let num3 = randomusefloor(1,9) + randomusefloor(1,9) + randomusefloor(1,9)
+            let num_s = num[randomusefloor(0,1)]+num2[randomusefloor(0,4)]+ num3
+            let git_s = makerandomletter(3)+randomusefloor(1,9)+randomusefloor(1,9)+randomusefloor(1,9)
+            +randomusefloor(1,9)+randomusefloor(1,9)+randomusefloor(1,9)+randomusefloor(1,9)
+             
+            let row_2 = document.createElement('tr');
+            let row_2_data_1 = document.createElement('td');
+            row_2_data_1.innerHTML = index;
+            let row_2_data_2 = document.createElement('td'); //班級
+            row_2_data_2.innerHTML = dep_s;
+            let row_2_data_3 = document.createElement('td'); //學號
+            row_2_data_3.innerHTML = num_s;
+            let row_2_data_4 = document.createElement('td');
+            row_2_data_4.innerHTML = name_s;
+            let row_2_data_5 = document.createElement('td');
+            row_2_data_5.innerHTML = git_s;
+            let row_2_data_6 = document.createElement('td');
+            row_2_data_6.innerHTML = randomusefloor(0,10);
+            let row_2_data_7 = document.createElement('td');
+            row_2_data_7.innerHTML = randomusefloor(0,10);
+            let row_2_data_8 = document.createElement('td');
+            row_2_data_8.innerHTML = randomusefloor(0,10);
+            let row_2_data_9 = document.createElement('td');
+            row_2_data_9.innerHTML = randomusefloor(0,10);
+            let row_2_data_10 = document.createElement('td');
+            row_2_data_10.innerHTML = randomusefloor(0,10);
+            let row_2_data_11 = document.createElement('td');
+            row_2_data_11.innerHTML = randomusefloor(0,10);
+            let row_2_data_12 = document.createElement('td');
+            row_2_data_12.innerHTML = randomusefloor(0,10);
+            let row_2_data_13 = document.createElement('td');
+            row_2_data_13.innerHTML = randomusefloor(0,10);
+            let row_2_data_14 = document.createElement('td');
+            row_2_data_14.innerHTML = randomusefloor(0,10);
+            let row_2_data_15 = document.createElement('td');
+            row_2_data_15.innerHTML = randomusefloor(0,10);
+
+            row_2.appendChild(row_2_data_1);
+            row_2.appendChild(row_2_data_2);
+            row_2.appendChild(row_2_data_3);
+            row_2.appendChild(row_2_data_4);
+            row_2.appendChild(row_2_data_5);
+            row_2.appendChild(row_2_data_6);
+            row_2.appendChild(row_2_data_7);
+            row_2.appendChild(row_2_data_8);
+            row_2.appendChild(row_2_data_9);
+            row_2.appendChild(row_2_data_10);
+            row_2.appendChild(row_2_data_11);
+            row_2.appendChild(row_2_data_12);
+            row_2.appendChild(row_2_data_13);
+            row_2.appendChild(row_2_data_14);
+            row_2.appendChild(row_2_data_15);
+            tbody.appendChild(row_2);
+
+        }
+
+
+        // 提取表格数据
+        var tableData = [];
+        var tableElement = document.querySelector('table'); // 使用不同的变量名
+        var rows = tableElement.querySelectorAll('tbody tr');
+        rows.forEach(function (row) {
+        var rowData = [];
+        var cells = row.querySelectorAll('td');
+        cells.forEach(function (cell) {
+            rowData.push(cell.textContent);
+        });
+        tableData.push(rowData);
+        });
+
+        // 创建CSV格式的字符串
+        var csvContent = "data:text/csv;charset=utf-8,";
+        tableData.forEach(function (row) {
+        var rowString = row.join(",");
+        csvContent += rowString + "\n";
+        });
+
+        // 创建Blob对象
+        var blob = new Blob([csvContent], { type: "text/csv" });
+
+        // 创建下载链接
+        var url = URL.createObjectURL(blob);
+
+        // 创建下载链接的HTML元素
+        var a = document.createElement("a");
+        a.href = url;
+        a.download = "table.csv"; // 设置CSV文件名
+        a.textContent = "Download CSV";
+
+        // 将下载链接添加到页面中
+        document.body.appendChild(a);
+
+    </script>  
+</body>
+</html>
