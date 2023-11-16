@@ -3,14 +3,8 @@ import define1 from "./a33468b95d0b15b0@817.js";
 async function _data(FileAttachment)
 {
   const data = await FileAttachment("data@1.csv").csv({typed: true});
-  return data.columns.slice(5).flatMap((columns) => data.map((d) => ({
-    index:d.序號,
-    class:d.班級,
-    id:d.學號,
-    name: d.姓名,
-    github: d.GitHub,
-    columns,
-    hw:d[columns]
+  return data.columns.slice(3).flatMap((columns) => data.map((d) => ({
+    index:d.序號,class:d.班級,id:d.學號,name: d.姓名,github: d.GitHub,columns,hw:d[columns]
   })));
 }
 
@@ -18,8 +12,9 @@ async function _data(FileAttachment)
 function _3(Plot,data){return(
 Plot.plot({
   x: {axis: "top", transform: (d) => d },
-  color: {scheme: "RdYlBu"},
-  marks: [Plot.cellX(data, {y: "name", x: "hw", fill: "hw"})]
+  width: 2000,
+  color: {scheme: "Set3"},
+  marks: [Plot.barY(data, {y: "hw", x: "name", fill: "hw"})]
 })
 )}
 
