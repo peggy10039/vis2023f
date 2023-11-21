@@ -12,8 +12,8 @@ async function _data(FileAttachment)
 function _3(Plot,data){return(
 Plot.plot({
   x: {axis: "top", transform: (d) => d },
-  width: 2000,
-  color: {scheme: "Set3"},
+  color: {scheme: "Accent"},
+  width: 2400,
   marks: [Plot.barY(data, {y: "hw", x: "name", fill: "hw"})]
 })
 )}
@@ -22,7 +22,7 @@ export default function define(runtime, observer) {
   const main = runtime.module();
   function toString() { return this.url; }
   const fileAttachments = new Map([
-    ["data@1.csv", {url: new URL("../data.json", import.meta.url), mimeType: "text/csv", toString}]
+    ["data@1.csv", {url: new URL("./files/c42ab1e35eee5423aaef7ef8b60301f693b4703add80a22cd914887288e00cb450c0c0b7ef4b5a4fe9cf3c3c09e94812a1125f55beff4bd819f9c68768911358.csv", import.meta.url), mimeType: "text/csv", toString}]
   ]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
   main.variable(observer("data")).define("data", ["FileAttachment"], _data);
