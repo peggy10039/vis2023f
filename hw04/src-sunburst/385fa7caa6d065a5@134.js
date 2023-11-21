@@ -3,7 +3,7 @@ md`# HW04 Sunburst`
 )}
 
 function _artist(FileAttachment){return(
-FileAttachment("artist.csv").csv()
+FileAttachment("artist-1@1.csv").csv()
 )}
 
 function _innerCircleQuestion(artist){return(
@@ -442,7 +442,7 @@ export default function define(runtime, observer) {
   const main = runtime.module();
   function toString() { return this.url; }
   const fileAttachments = new Map([
-    ["artist.csv", {url: new URL("./artist.csv", import.meta.url), mimeType: "text/csv", toString}]
+    ["artist-1@1.csv", {url: new URL("./artist.csv", import.meta.url), mimeType: "text/csv", toString}]
   ]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
   main.variable(observer()).define(["md"], _1);
