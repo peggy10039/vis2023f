@@ -181,7 +181,7 @@ https://www.oxxostudio.tw/articles/201501/svg-d3-13-csv.html
         else return "poor-kid";})
     .append("img")
     .attr("src", function (d, i) { 
-        if (d == 10) return "./svg10/test.gif";
+        if (d == 10) return "./svg10/52.svg";
         else if (d == 9) return "./svg10/51.svg";
         else if (d == 8) return "./svg10/42.svg";
         else if (d == 7) return "./svg10/41.svg";
@@ -216,7 +216,7 @@ https://www.oxxostudio.tw/articles/201501/svg-d3-13-csv.html
             .html(function (d, i) {
                 if ( i == 4 && d != 'GitHub' ) {
                     const imageSource = 'https://raw.githubusercontent.com/peggy10039/vis2023f/main/hw00/me.jpg';
-                    return '<img src="' + imageSource + '">' + '<hr><a href="https://github.com/' + d + '/vis2023f/" target="_blank">' + d + '</a>';
+                    return '<img src="./svg10/love.gif">' + '<hr><a href="https://github.com/' + d + '/vis2023f/" target="_blank">' + d + '</a>';
                 }
                 else if ( i == 0 || i == 2 || isNaN(d)) { // 序號、學號 要顯示
                     return d;
@@ -233,7 +233,7 @@ https://www.oxxostudio.tw/articles/201501/svg-d3-13-csv.html
             .append("img")
             .attr("src", function (d, i) {
                 if (d == 10) 
-                    return "./svg10/test.gif";
+                    return "./svg10/52.svg";
                 else if (d == 9) 
                     return "./svg10/51.svg";
                 else if (d == 8) 
