@@ -215,7 +215,7 @@ function _chart1(data,selectedSeries1,d3)
   // 定義顏色的比例尺
   const colorScale = d3.scaleOrdinal()
     .domain(keys)
-    .range(['#8B81C3', '#B481BB']);
+    .range(['#4E4F97', '#8F77B5']);
 
   // 創建SVG元素
   const svg = d3.create("svg")
