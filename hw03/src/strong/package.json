@@ -1,0 +1,14 @@
+{
+  "name": "22ac1767f5aac869",
+  "main": "22ac1767f5aac869@78.js",
+  "version": "78.0.0",
+  "homepage": "https://observablehq.com/d/22ac1767f5aac869",
+  "author": {
+    "name": "北科大-李沛誼's Workspace",
+    "url": "https://observablehq.com/@bei-ke-da-li-pei-yi-ws"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
